@@ -42,8 +42,8 @@ function Home() {
                     return <>
                         <div className='col d-flex justify-content-center'>
                             <div className='mx-auto d-flex flex-column gap-2'>
-                                <Link to={`/${item.id}`}> <div style={{ height: "330px", width: "280px" }}>
-                                    <img src={`${path}${item.backdrop_path}`} className='w-100 h-100' alt='not available'></img>
+                                <Link to={`/${item.id}`}> <div style={{ height: "390px", width: "280px" }}>
+                                    <img src={`${path}${item.poster_path}`} className='w-100 h-100' alt='not available'></img>
                                 </div></Link>
                                 <h6>{item.title}</h6>
                                 <h6>Rating: {item.vote_average}</h6>
@@ -54,8 +54,8 @@ function Home() {
                     return <>
                         <div className='col d-flex justify-content-center'>
                             <div className='mx-auto d-flex flex-column gap-2'>
-                                <Link to={`/${item.id}`}> <div style={{ height: "330px", width: "280px" }}>
-                                    <img src={`${path}${item.backdrop_path}`} className='w-100 h-100'></img>
+                                <Link to={`/${item.id}`}> <div style={{ height: "390px", width: "280px" }}>
+                                    <img src={`${path}${item.poster_path}`} className='w-100 h-100'></img>
                                 </div></Link>
                                 <h6>{item.title}</h6>
                                 <h6>Rating: {item.vote_average}</h6>

@@ -39,7 +39,7 @@ function TopRated() {
                             <div className='mx-auto d-flex flex-column gap-2'>
                                 <div style={{ height: "330px", width: "280px" }}>
                                     <Link to={`/${item.id}`}> <div style={{ height: "330px", width: "280px" }}>
-                                        <img src={`${path}${item.backdrop_path}`} className='w-100 h-100'></img>
+                                        <img src={`${path}${item.poster_path}`} className='w-100 h-100'></img>
                                     </div></Link>
                                 </div>
                                 <h6>{item.title}</h6>
@@ -53,7 +53,7 @@ function TopRated() {
                             <div className='mx-auto d-flex flex-column gap-2'>
                                 <div style={{ height: "330px", width: "280px" }}>
                                     <Link to={`/${item.id}`}> <div style={{ height: "330px", width: "280px" }}>
-                                        <img src={`${path}${item.backdrop_path}`} className='w-100 h-100'></img>
+                                        <img src={`${path}${item.poster_path}`} className='w-100 h-100'></img>
                                     </div></Link>
                                 </div>
                                 <h6>{item.title}</h6>
