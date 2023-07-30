@@ -26,6 +26,7 @@ function Navbar() {
 
     function handlesubmit(e) {
         e.preventDefault()
+
         dispatch(filterget({ name, page }))
 
 
@@ -67,6 +68,7 @@ function Navbar() {
                         </ul>
                         <form class="d-flex" onSubmit={handlesubmit}>
                             <input class="form-control me-2" type="search" value={name} placeholder="Search Movies" aria-label="Search" onChange={(e) => {
+                                setPage(1)
                                 setname(e.target.value)
 
                             }} />

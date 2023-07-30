@@ -40,7 +40,7 @@ function Single() {
                     <div style={{ position: "absolute", width: "100%", height: "100%" }} className='p-3'>
 
                         <div className='box1 d-flex flex-wrap gap-3'>
-                            <div><img src={`${path}${single.backdrop_path}`} style={{ height: "300px", width: "300px" }}></img></div>
+                            <div><img src={`${path}${single.backdrop_path}`} style={{ height: "200px", width: "200px" }}></img></div>
                             <div className='d-flex flex-column justify-content-center'>
                                 <h2>{single.original_title}</h2>
                                 <h5 className='text-primary'>Rating: {single.vote_average}</h5>
