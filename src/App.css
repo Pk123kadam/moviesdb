@@ -2,3 +2,16 @@ body {
   background-color: rgb(54, 53, 53);
   color: white;
 }
+
+
+.btn-check:focus+.btn,
+.btn:focus {
+  box-shadow: none;
+  background-color: rgb(159, 160, 160);
+}
+
+#submit:focus {
+  background-color: green;
+  color: white;
+
+}

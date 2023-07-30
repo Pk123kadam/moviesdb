@@ -72,7 +72,7 @@ function Navbar() {
                                 setname(e.target.value)
 
                             }} />
-                            <button class="btn btn-outline-success" type="submit">Search</button>
+                            <button class="btn btn-outline-success" type="submit" id='submit'>Search</button>
                         </form>
                     </div>
                 </div>
