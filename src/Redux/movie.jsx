@@ -16,6 +16,7 @@ const initialState = {
     cast: [],
     fil: [],
     genres: [],
+
     load: false,
     error: null
 
@@ -119,6 +120,7 @@ export const movieSlice = createSlice({
 
             }).addCase(filterget.fulfilled, (state, action) => {
                 state.fil = action.payload
+
 
                 state.load = false
 
@@ -226,7 +228,7 @@ export const filterget = createAsyncThunk(
         console.log(thunkAPI)
 
 
-        const data = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=c45a857c193f6302f2b5061c3b85e743&language=en-US&query=${thunkAPI}&page=1`)
+        const data = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=c45a857c193f6302f2b5061c3b85e743&language=en-US&query=${thunkAPI.name}&page=${thunkAPI.page}`)
         console.log(data)
 
         return data.data.results

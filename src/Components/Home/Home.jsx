@@ -11,6 +11,7 @@ function Home() {
     const dispatch = useDispatch()
     const { movie, fil, load, error } = useSelector((state) => state.movie)
     const [page, setPage] = useState(1);
+
     const handleScroll = () => {
         if (
             window.innerHeight + document.documentElement.scrollTop ===
@@ -30,10 +31,11 @@ function Home() {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     })
-    console.log(fil)
+
 
 
     return (
+
         <div className='container-fluid' id='home'>
             <div className='row row-cols-lg-4 row-cols-md-2 row-cols-1 gy-5'>
                 {load ? <Loader></Loader> : fil.length > 0 ? fil.map((item, index) => {

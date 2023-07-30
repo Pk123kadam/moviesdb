@@ -10,6 +10,7 @@ import TopRated from './Components/Toprated/TopRated';
 import Upcoming from './Components/Upcoming/Upcoming';
 import Single from './Components/Single/Single';
 
+
 function App() {
 
 
@@ -18,7 +19,9 @@ function App() {
       <Provider store={store}>
         <BrowserRouter>
           <Navbar></Navbar>
+
           <Routes>
+
             <Route path='/' element={<Home></Home>}></Route>
             <Route path='/toprated' element={<TopRated></TopRated>}></Route>
             <Route path='/popular' element={<Home></Home>}></Route>

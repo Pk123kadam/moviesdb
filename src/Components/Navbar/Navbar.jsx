@@ -9,14 +9,34 @@ import { filterget } from '../../Redux/movie'
 
 function Navbar() {
     const dispatch = useDispatch()
+    const { load } = useSelector((state) => state.movie)
     const [name, setname] = useState("")
+    const [page, setPage] = useState(1);
+    const handleScroll = () => {
+        if (
+            window.innerHeight + document.documentElement.scrollTop ===
+            document.documentElement.offsetHeight
+        ) {
+            // User has scrolled to the bottom of the page
+            if (!load) {
+                setPage((prevPage) => prevPage + 1);
+            }
+        }
+    };
 
     function handlesubmit(e) {
         e.preventDefault()
-        dispatch(filterget(name))
+        dispatch(filterget({ name, page }))
 
 
     }
+    useEffect(() => {
+        dispatch(filterget({ name, page }))
+    }, [page])
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    })
 
 
 

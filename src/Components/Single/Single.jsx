@@ -23,6 +23,7 @@ function Single() {
 
     }, [])
 
+
     let fil = cast.filter((e, i) => i <= 5)
 
 
@@ -61,7 +62,7 @@ function Single() {
                     </div>
                 </div>
                 <h2 className='mt-3'>Cast</h2>
-                <div className='row row-cols-lg-6 row-cols-md-3 row-cols-1'>
+                <div className='row row-cols-lg-6 row-cols-md-3 row-cols-1' style={{ paddingBottom: "250px" }}>
                     {fil.map((e) => {
                         return <>
                             <div className='col'>
