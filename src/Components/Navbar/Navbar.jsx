@@ -66,7 +66,7 @@ function Navbar() {
 
                         </ul>
                         <form class="d-flex" onSubmit={handlesubmit}>
-                            <input class="form-control me-2" type="search" value={name} placeholder="Search" aria-label="Search" onChange={(e) => {
+                            <input class="form-control me-2" type="search" value={name} placeholder="Search Movies" aria-label="Search" onChange={(e) => {
                                 setname(e.target.value)
 
                             }} />
