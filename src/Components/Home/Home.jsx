@@ -14,16 +14,14 @@ function Home() {
 
 
     const handleScroll = () => {
-        const scrollY = window.scrollY;
-        const totalHeight = document.documentElement.scrollHeight;
-        const windowHeight = window.innerHeight;
-
-        if (scrollY === 0 && page > 1 && !load) {
-            // User has scrolled to the top of the page and there's a previous page
-            setPage((prevPage) => prevPage - 1);
-        } else if (scrollY + windowHeight >= totalHeight && !load) {
+        if (
+            window.innerHeight + document.documentElement.scrollTop ===
+            document.documentElement.offsetHeight
+        ) {
             // User has scrolled to the bottom of the page
-            setPage((prevPage) => prevPage + 1);
+            if (!load) {
+                setPage((prevPage) => prevPage + 1);
+            }
         }
     };
     useEffect(() => {
